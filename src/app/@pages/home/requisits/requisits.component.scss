@@ -1,0 +1,143 @@
+@import "../../../../styles/responsive";
+
+
+
+.list {
+  height: 100%;
+  background-color: var(--white);
+  -webkit-transform: skewY(-50deg);
+  -moz-transform: skewY(-50deg);
+  -ms-transform: skewY(-50deg);
+  -o-transform: skewY(-50deg);
+  transform: skewY(-50deg) translateY(-50%);
+
+  @include tablet {
+
+    height: 200%;
+    transform: skewY(-50deg) translateY(-75%);
+
+  }
+
+  @include desktop {}
+
+  &__h2 {
+    position: absolute;
+    top: 123px;
+    left: 20px;
+    color: #adadad;
+    font-size: 35px;
+    width: 40%;
+    text-align: center;
+
+    @include tablet {
+
+      top: 253px;
+      font-size: 55px;
+
+    }
+
+    @include desktop {
+
+      font-size: 75px;
+
+    }
+
+    strong {
+      color: var(--purple);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    transform: translate(-50%, 0);
+    height: 400px;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+
+    @include tablet {
+
+      height: 600px;
+
+
+    }
+
+    @include desktop {
+      left: 60%;
+      transform: translate(-50%, 0);
+
+
+    }
+  }
+}
+
+.create {
+  height: 50%;
+
+
+  &__h2 {
+    position: absolute;
+    bottom: 111px;
+    right: 28px;
+    color: #adadad;
+    font-size: 35px;
+    width: 40%;
+    text-align: center;
+
+    @include tablet {
+
+      bottom: 251px;
+      font-size: 55px;
+
+    }
+
+    @include desktop {
+
+      font-size: 75px;
+
+    }
+
+    strong {
+      color: var(--gold);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 16px;
+    right: 40%;
+    transform: rotate(180deg) translate(50%, 0);
+    height: 240px;
+    mix-blend-mode: screen;
+    pointer-events: none;
+
+    @include tablet {
+
+      height: 440px;
+
+
+    }
+
+    @include desktop {
+      right: 45%;
+      transform: rotate(180deg) translate(50%, 0);
+
+
+    }
+  }
+}
+
+
+.or {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+
+  h3 {
+    font-size: 70px;
+
+  }
+}

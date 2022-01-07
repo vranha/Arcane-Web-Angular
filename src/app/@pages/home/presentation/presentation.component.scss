@@ -1,0 +1,149 @@
+@import "../../../../styles/responsive";
+
+* {
+  background-color: var(--black);
+}
+
+@include tablet {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+  }
+
+}
+
+.image{
+  display: none;
+
+  @include tablet {
+
+    background-image: url("https://arcane-profile-kit.co.uk/wp-content/uploads/2021/11/arcane-logo-rendered-master-2.png");
+    display:block;
+    width: 50%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+    margin-top:50px;
+  }
+
+  @include desktop {
+
+    width:30%;
+  }
+}
+
+
+
+.titles {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: 200px;
+  border: 3px solid white;
+  border-radius: 3px;
+  padding-bottom: 100px;
+  margin: 50px 0px 30px 30px;
+
+  @include tablet {
+    margin:100px;
+    margin-top:50px ;
+    width: 50%;
+
+  }
+
+  @include desktop {
+    width: 30%;
+
+  }
+
+  h2 {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    transform: translate(calc(-0% + 1vw), 0);    padding-left: 10px;
+    color: var(--white);
+
+
+    @include tablet {
+    left: 50%;
+    transform: translate(calc(-50% + 60px), 0);
+      top:270px;
+
+    }
+    @include desktop {
+      left: 50%;
+    transform: translate(calc(-50% + 60px), 0);
+      top: 270px;
+      font-size: 30px;
+    }
+
+    fa-icon {
+      position: relative;
+      top: 17px;
+      left: 5px;
+      font-size: 35px
+
+
+    }
+  }
+
+  p {
+    position: relative;
+    color: var(--grey);
+    width: calc(180px + 10vw);
+    top: 40px;
+    left: 25px;
+    z-index: 2;
+
+    @include tablet {
+      font-size:18px;
+
+      top: 50px;
+
+    }
+
+    @include desktop {
+      font-size:20px;
+      top: 50px;
+      left: 40px;
+
+    }
+  }
+}
+
+ngx-typed-js {
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-align: right;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+    transform: translate(calc(-50% + 60px), 0);
+  max-width: 100px;
+  z-index: 3;
+
+  @include tablet {
+   top: 430px;
+   left: 50%;
+    transform: translate(calc(-50% + 120px), 0)
+  }
+
+  @include desktop {
+   top: 430px;
+   left: 50%;
+   transform: translate(calc(-50% + 150px), 0)
+  }
+
+  h3 {
+    width: 150px;
+    margin-right: 35px ;
+
+    span.typing {
+      color: var(--purple)
+    }
+  }
+}

@@ -1,0 +1,87 @@
+
+
+<div *ngIf="!cargasvg" >
+  <div class="pag">
+    <div class="inputDiv">
+      <input type="text" name="name" id="name"[(ngModel)]="searchText" placeholder="{{'Search Character' | translate}}"/>
+      <div class="labelDiv">
+        <label for="name"> <fa-icon [icon]="faSearch" size="2x"  [styles]="{'position': 'relative', 'padding':'5px', 'stroke': 'red', 'color': 'var(--gold)','border-radius':'3px', 'background-color': 'black'}"></fa-icon>
+        </label>
+      </div>
+    </div>
+
+    <div class="down">
+      <fa-icon [icon]="faArrowAltCircleDown" size="2x"  [styles]="{'position': 'relative', 'padding':'5px', 'color': 'var(--gold)','border-radius':'3px' }"size="3x" (click)="scrollToElement(targetDown)"></fa-icon>
+    </div>
+
+    <div class="targetTop" #targetTop></div>
+
+    <div class="noMatches" *ngIf="(characterList |filter : searchText : 'name').length === 0 ">
+      <h2>Ooops...</h2>
+      <h3>Try again.</h3>
+    </div>
+    <ul>
+      <li *ngFor="let character of characterList  | filter : searchText : 'name'">
+        <div class="h1Back">
+
+          <h1>{{character.name}}</h1>
+        </div>
+        <h2>{{character.alias}}</h2>
+        <div class="card"id="cha{{character.id}}">
+          <div class="content">
+            <h3>{{character.name | uppercase}}</h3>
+            <h4 *ngIf="character.origin === 'Zaun'; else elseTemplate" [style.color]="'var(--purple)'">{{character.origin}}</h4>
+            <ng-template #elseTemplate> <h4 [style.color]="'var(--gold)'">{{character.origin}}</h4> </ng-template>
+            <h4>{{character.race}} </h4>
+          </div>
+          <div class="details">{{"DETAILS" | translate}}</div>
+          <img src="{{character.image}}" alt="{{character.name}}">
+          <div  class="{{(characterList |filter : searchText : 'name').length === 1  ? 'cover2' : 'cover'}}"></div>
+          <div class="bars">
+            <div class="skills">
+              <div class="skill">
+                <div class="skill-name">strength</div>
+                <div class="skill-bar">
+                      <div class="skill-per"style="max-width:{{character.stats.strength}}%"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <div class="skill-name">intelligence</div>
+                  <div class="skill-bar">
+                      <div class="skill-per"style="max-width:{{character.stats.intelligence}}%"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <div class="skill-name">agility</div>
+                  <div class="skill-bar">
+                      <div class="skill-per"style="max-width:{{character.stats.agility}}%"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <div class="skill-name">gadgets</div>
+                  <div class="skill-bar">
+                      <div class="skill-per"style="max-width:{{character.stats.gadgets}}%"></div>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <div class="up">
+  <fa-icon *ngIf="(characterList |filter : searchText : 'name').length !== 0" [icon]="faArrowAltCircleUp" size="2x"  [styles]="{'position': 'relative', 'padding':'5px', 'color': 'var(--gold)','border-radius':'3px' }"size="3x" (click)="scrollToElement(targetTop)"></fa-icon>
+  </div>
+
+
+  <div  class="{{(characterList |filter : searchText : 'name').length === 0  ? 'more2' : 'more'}}">
+    <a routerLink="/list/other"><strong>[</strong>  {{"More League of Legends characters..." | translate}}  <strong>]</strong></a>
+  </div>
+
+  <div #targetDown></div>
+
+  <app-footer  class="{{(characterList |filter : searchText : 'name').length === 0  ? 'more2Footer' : 'moreFooter'}}"></app-footer>
+</div>

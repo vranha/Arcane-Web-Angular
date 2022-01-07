@@ -1,0 +1,48 @@
+<div class="title"></div>
+<div class="back"></div>
+<ul>
+  <li *ngFor="let character of otherList | paginate: { itemsPerPage: 6, currentPage: p }">
+    <h2> {{character.name | uppercase}} </h2>
+    <img src="{{character.image}}" alt="Champion image">
+    <h3>{{character.title | uppercase}}</h3>
+    <p>{{character.blurb}}</p>
+    <table>
+      <tr>
+        <td>Attack: </td>
+        <td> {{character.info.attack}}</td>
+      </tr>
+      <tr>
+        <td>Defense: </td>
+        <td> {{character.info.defense}}</td>
+      </tr>
+      <tr>
+        <td>Difficulty: </td>
+        <td> {{character.info.difficulty}}</td>
+      </tr>
+      <tr>
+        <td>Magic: </td>
+        <td> {{character.info.magic}}</td>
+      </tr>
+    </table>
+  </li>
+</ul>
+
+<pagination-controls class="my-pagination" (pageChange)="onPageChange(p = $event)" [maxSize]="5"></pagination-controls>
+
+<style>
+  .my-pagination {
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+
+  .my-pagination /deep/ .ngx-pagination .current {
+    background: var(--purple);
+    border-radius: 5px;
+  }
+
+</style>
+
+<app-footer></app-footer>

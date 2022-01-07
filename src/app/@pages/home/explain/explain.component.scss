@@ -1,0 +1,56 @@
+@import "../../../../styles/responsive";
+
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  faArrow {
+    position: relative;
+
+  }
+}
+
+.titles {
+  transform: scale(0.9);
+  transform: translateY(5px);
+
+  @include tablet {
+    transform: scale(1.4);
+
+  }
+
+}
+
+.piltover {
+  text-align: center;
+  color: var(--gold);
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.zaun {
+  text-align: center;
+  color: var(--purple);
+  font-size: 26px;
+  letter-spacing: 3px;
+
+}
+
+p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @include tablet {
+    margin-bottom: 70px;
+
+  }
+
+}

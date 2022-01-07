@@ -1,0 +1,113 @@
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="createForm">
+  <h2><strong>{{"Create" | translate}}</strong> {{"Your Arcane Character" | translate}} </h2>
+  <div class="div__name">
+    <label for="name">{{"Name" | translate}}</label>
+    <input type="text" id="name" formControlName="name" placeholder="Ex: Jinx">
+    <span class="errMessage" *ngIf="!createForm.get('name')?.valid &&
+    (createForm.get('name')?.dirty || submitted)">Must be between 2 and 20 characters without spaces or numbers.</span>
+    <span *ngIf="createForm.get('name')?.valid &&
+    (createForm.get('name')?.dirty || submitted)">
+      <fa-icon class="check" [icon]="faCheck" size="2x"
+        [styles]="{'position': 'relative', 'padding':'8px', 'color': 'green'}"></fa-icon>
+    </span>
+    <span *ngIf="!createForm.get('name')?.valid &&
+    (createForm.get('name')?.dirty || submitted)">
+      <fa-icon class="cross" [icon]="faTimes" size="2x"
+        [styles]="{'position': 'relative', 'padding':'5px', 'color': 'red'}"></fa-icon>
+    </span>
+  </div>
+  <div class="div__alias">
+    <label for="alias">{{"Alias" | translate}}</label>
+    <input type="text" id="alias" formControlName="alias" placeholder="Ex: {{'The Loose Canoon' | translate}}">
+    <span class="errMessage" *ngIf="!createForm.get('alias')?.valid &&
+    (createForm.get('alias')?.dirty || submitted)">Must be between 2 and 15 characters without spaces or
+      numbers.</span>
+    <span *ngIf="createForm.get('alias')?.valid &&
+    (createForm.get('alias')?.dirty || submitted)">
+      <fa-icon class="check" [icon]="faCheck" size="2x"
+        [styles]="{'position': 'relative', 'padding':'8px', 'color': 'green'}"></fa-icon>
+    </span>
+    <span *ngIf="!createForm.get('alias')?.valid &&
+    (createForm.get('alias')?.dirty || submitted)">
+      <fa-icon class="cross" [icon]="faTimes" size="2x"
+        [styles]="{'position': 'relative', 'padding':'5px', 'color': 'red'}"></fa-icon>
+    </span>
+  </div>
+  <div class="div__race">
+    <label for="race">{{"Race" | translate}}</label>
+    <input type="text" id="race" formControlName="race" placeholder="Ex: {{'Human' | translate}}">
+    <span class="errMessage" *ngIf="!createForm.get('race')?.valid &&
+    (createForm.get('race')?.dirty || submitted)">Must be between 2 and 10 characters without spaces or numbers.</span>
+    <span *ngIf="createForm.get('race')?.valid &&
+    (createForm.get('race')?.dirty || submitted)">
+      <fa-icon class="check" [icon]="faCheck" size="2x"
+        [styles]="{'position': 'relative', 'padding':'8px', 'color': 'green'}"></fa-icon>
+    </span>
+    <span *ngIf="!createForm.get('race')?.valid &&
+    (createForm.get('race')?.dirty || submitted)">
+      <fa-icon class="cross" [icon]="faTimes" size="2x"
+        [styles]="{'position': 'relative', 'padding':'5px', 'color': 'red'}"></fa-icon>
+    </span>
+  </div>
+  <div class="div__origin">
+    <label for="origin">{{"Origin" | translate}}</label>
+    <input type="text" id="origin" formControlName="origin" placeholder="Ex: Zaun">
+    <span class="errMessage" *ngIf="!createForm.get('origin')?.valid &&
+    (createForm.get('origin')?.dirty || submitted)">Must be between 2 and 10 characters without spaces or
+      numbers.</span>
+    <span *ngIf="createForm.get('origin')?.valid &&
+    (createForm.get('origin')?.dirty || submitted)">
+      <fa-icon class="check" [icon]="faCheck" size="2x"
+        [styles]="{'position': 'relative', 'padding':'8px', 'color': 'green'}"></fa-icon>
+    </span>
+    <span *ngIf="!createForm.get('origin')?.valid &&
+    (createForm.get('origin')?.dirty || submitted)">
+      <fa-icon class="cross" [icon]="faTimes" size="2x"
+        [styles]="{'position': 'relative', 'padding':'5px', 'color': 'red'}"></fa-icon>
+    </span>
+  </div>
+  <div class="div__image">
+    <label for="image">{{"Image" | translate}}</label>
+    <select id="image" formControlName="image" placeholder="Ex: Zaun">
+      <option value="Superhero">{{"Superhero" | translate}}</option>
+      <option value="Alien">{{"Alien" | translate}}</option>
+      <option value="Valkyrie">{{"Valkyrie" | translate}}</option>
+    </select>
+    <span *ngIf="!createForm.get('image')?.valid &&
+    (createForm.get('image')?.dirty || submitted)">
+      <fa-icon class="cross" [icon]="faTimes" size="2x"
+        [styles]="{'position': 'relative', 'padding':'5px', 'color': 'red'}"></fa-icon>
+    </span>
+  </div>
+  <h3>{{"STATS" | translate}}</h3>
+  <div class="div__stats">
+    <div class="propertyDiv">
+      <label for="strength">{{"Strength" | translate}}</label>
+      <input type="number" id="strength" formControlName="strength" min="0" max="100" placeholder="[ 0 - 100 ]">
+    </div>
+    <div class="propertyDiv">
+      <label for="intelligence">{{"Intelligence" | translate}}</label>
+      <input type="number" id="intelligence" formControlName="intelligence" min="0" max="100" placeholder="[ 0 - 100 ]">
+    </div>
+    <div class="propertyDiv">
+      <label for="agility">{{"Agility" | translate}}</label>
+      <input type="number" id="agility" formControlName="agility" min="0" max="100" placeholder="[ 0 - 100 ]">
+    </div>
+    <div class="propertyDiv">
+      <label for="gadgets">{{"Gadgets" | translate}}</label>
+      <input type="number" id="gadgets" formControlName="gadgets" min="0" max="100" placeholder="[ 0 - 100 ]">
+    </div>
+    <div class="statsMessage">
+      <span class="errMessage" *ngIf="(!createForm.get('strength')?.valid &&
+      (createForm.get('strength')?.dirty || submitted)) || (!createForm.get('intelligence')?.valid &&
+      (createForm.get('intelligence')?.dirty || submitted)) || (!createForm.get('agility')?.valid &&
+      (createForm.get('agility')?.dirty || submitted)) || (!createForm.get('gadgets')?.valid &&
+      (createForm.get('gadgets')?.dirty || submitted))">Must be numbers between 0 and 100</span>
+    </div>
+  </div>
+
+
+  <button class="createButton">{{"Create2" | translate}}</button>
+</form>
+
+<app-footer></app-footer>

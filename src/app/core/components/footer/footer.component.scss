@@ -1,0 +1,18 @@
+* {
+  background: black;
+  color: white;
+
+  z-index: 99999;
+
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+
+  p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Jinx",
+      "race": "Human",
+      "origin": "Zaun",
+      "image": "https://pbs.twimg.com/media/FDJKNv5WQAAjE_1.png",
+      "alias": "THE LOOSE CANNON",
+      "stats": {
+        "strength": 30,
+        "intelligence": 60,
+        "agility": 70,
+        "gadgets": 75
+      }
+    },
+    {
+      "id": 2,
+      "name": "Vi",
+      "race": "Human",
+      "origin": "Zaun",
+      "image": "https://pbs.twimg.com/media/FDJKTWmXIAs0kC7.png",
+      "alias": "THE PILTOVER ENFORCER",
+      "stats": {
+        "strength": 90,
+        "intelligence": 40,
+        "agility": 80,
+        "gadgets": 50
+      }
+    },
+    {
+      "id": 3,
+      "name": "Jayce",
+      "race": "Human",
+      "origin": "Piltover",
+      "image": "https://intothearcane.leagueoflegends.com/static/jayce-7b41cfc635306afe42900e0b52c4ba82.png",
+      "alias": "THE DEFENDER OF TOMORROW",
+      "stats": {
+        "strength": 80,
+        "intelligence": 75,
+        "agility": 60,
+        "gadgets": 70
+      }
+    },
+    {
+      "id": 4,
+      "name": "Caitlyn",
+      "race": "Human",
+      "origin": "Piltover",
+      "image": "https://key0.cc/images/small/57827_5317c81daa61d8f307d4ede06cc2aade.png",
+      "alias": "THE SHERIFF OF PILTOVER",
+      "stats": {
+        "strength": 20,
+        "intelligence": 60,
+        "agility": 50,
+        "gadgets": 50
+      }
+    },
+    {
+      "id": 5,
+      "name": "Ekko",
+      "race": "Human",
+      "origin": "Zaun",
+      "image": "https://www.pngkit.com/png/full/4-42821_ekko-league-of-legends-fan-art-2605-league.png",
+      "alias": "THE BOY WHO SHATTERED TIME",
+      "stats": {
+        "strength": 40,
+        "intelligence": 80,
+        "agility": 85,
+        "gadgets": 75
+      }
+    },
+    {
+      "id": 6,
+      "name": "Heimer",
+      "race": "Yordle",
+      "origin": "Bandle",
+      "image": "https://pbs.twimg.com/media/EPEzdk5WAAA-OB2.png",
+      "alias": "THE REVERED INVENTOR",
+      "stats": {
+        "strength": 20,
+        "intelligence": 100,
+        "agility": 20,
+        "gadgets": 85
+      }
+    },
+    {
+      "id": 7,
+      "name": "Viktor",
+      "race": "Human",
+      "origin": "Zaun",
+      "image": "https://2img.net/h/fc06.deviantart.net/fs71/f/2012/038/e/4/victor_chibi_by_lileyx_chan-d4oxo5r.png",
+      "alias": "THE MACHINE HERALD",
+      "stats": {
+        "strength": 25,
+        "intelligence": 90,
+        "agility": 20,
+        "gadgets": 90
+      }
+    },
+    {
+      "id": 7,
+      "name": "Singed",
+      "race": "Human",
+      "origin": "Piltover",
+      "image": "https://i.pinimg.com/originals/38/5e/4a/385e4a24aa69e8f16ba1e97b8bdca31e.png",
+      "alias": "THE MAD CHEMIST",
+      "stats": {
+        "strength": 30,
+        "intelligence": 90,
+        "agility": 50,
+        "gadgets": 80
+      }
+    },
+    {
+      "id": 204844473079765600,
+      "name": "Oriol",
+      "alias": "The Admin",
+      "race": "Human",
+      "origin": "Barcelona",
+      "image": "https://i.graphicmama.com/uploads/2019/4/5cbd630146fb7-generic-superhero-cartoon-vector-character-aka-mister-magnetic.png",
+      "stats": {
+        "strength": 60,
+        "intelligence": 99,
+        "agility": 70,
+        "gadgets": 20
+      }
+    }
+  ]
+}

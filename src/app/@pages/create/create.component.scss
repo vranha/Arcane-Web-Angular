@@ -1,0 +1,157 @@
+@import "../../../styles/responsive";
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+
+  h2 {
+    margin: 1.25rem .625rem 0rem .625rem;
+    font-size: 1.875rem;
+    letter-spacing: .4375rem;
+    color: var(--gold);
+    text-shadow: 0rem .125rem .1875rem black;
+    margin-bottom: .3125rem;
+    text-align: center;
+    text-transform: uppercase;
+
+
+    strong {
+      color: var(--purple);
+      font-size: 2.375rem;
+      margin: 0rem 2.5rem;
+      display: block;
+    }
+  }
+
+  span {
+    height: 0rem
+  }
+
+  label {
+    letter-spacing: .125rem;
+    font-size: 1rem;
+    font-weight: 500;
+
+    @include tablet {
+      margin: 0px auto;
+    }
+
+  }
+
+  input,
+  select {
+    outline: none;
+    display: inline;
+    height: 2.0625rem;
+    border-radius: .1875rem;
+    border: .125rem solid var(--grey);
+    letter-spacing: .0625rem;
+    padding-left: .625rem;
+    text-transform: capitalize;
+
+    @include tablet {
+      height: 2.0625rem;
+      width: 70vw;
+      margin: 0 auto;
+    }
+
+
+
+    &::placeholder {
+      letter-spacing: .0625rem;
+      color: rgb(159 66 187 / 51%);
+      position: relative;
+    }
+
+    &:focus {
+      outline: .125rem solid var(--purple);
+    }
+  }
+
+  .div__name,
+  .div__alias,
+  .div__race,
+  .div__origin,
+  .div__image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 6.25rem;
+  }
+
+  .div__stats {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
+    height: 10rem;
+    margin-bottom: 1.25rem;
+
+    .propertyDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    input {
+      margin: 0rem .625rem .9375rem .625rem;
+      width: 30vw;
+      padding: 0rem;
+      text-align: center;
+
+
+    }
+
+    .statsMessage {
+      height: 5rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+  h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: .625rem;
+  }
+
+  .errMessage {
+    color: rgb(247, 86, 86);
+    font-weight: 400;
+    font-size: .875rem;
+  }
+
+  .check {
+    position: relative;
+    top: -2rem;
+    left: 15.6875rem;
+  }
+
+  .cross {
+    position: relative;
+    top: -2rem;
+    left: 16rem;
+  }
+
+
+  .createButton {
+
+    margin: 0 auto 3.125rem auto;
+    padding: .75rem 1.375rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--purple);
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1.25rem #0000004d;
+    border-radius: 1.25rem;
+    font-size: .9375rem;
+    letter-spacing: .3125rem;
+    text-transform: uppercase;
+  }
+}

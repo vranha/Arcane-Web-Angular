@@ -1,0 +1,12 @@
+<div class="image"></div>
+
+<div class="container">
+  <div class="titles">
+    <h2>{{"A Arcane character is" | translate }} <fa-icon [icon]="faArrow"></fa-icon>
+    </h2>
+    <p>{{"descriptionArcane" | translate}}</p>
+  </div>
+  <ngx-typed-js [loop]="true" [typeSpeed]="100" [backSpeed]="30" [backDelay]="1300" [strings]="charactersType">
+    <h3><span class="typing"></span></h3>
+  </ngx-typed-js>
+</div>

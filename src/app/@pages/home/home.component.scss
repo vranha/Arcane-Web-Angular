@@ -1,0 +1,162 @@
+@import "../../../styles/responsive";
+
+
+
+* {
+  background-color: var(--black);
+}
+
+
+
+.container {
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  overflow-y: auto;
+  perspective: 3px;
+  box-shadow: 0 5px 30px black;
+}
+
+section {
+  background-size: cover;
+  color: white;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.image {
+    background-position: center;
+    transform: translateZ(-1px) translateY(30px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: cover;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+    height: 80vh;
+  }
+
+  &.image1 {
+    background-image: url(../../../images/Piltover.jpg);
+  }
+
+  &.image2 {
+    background-image: url(../../../images/Zaun.jpg);
+  }
+
+  &.section__top {
+    height: 50vh;
+    width: 100vw;
+    padding: 0 20px 0 20px;
+    align-items: flex-start;
+    background: var(--black);
+    font-size: 14px;
+  }
+
+  &.text {
+    height: 30vh;
+    width: 100vw;
+    padding: 20px;
+    background: var(--black);
+    box-shadow: 0 5px 30px black;
+    font-size: 14px;
+
+    @include tablet {
+
+      font-size: 20px;
+
+    }
+
+    @include desktop {
+
+      font-size: 24px;
+
+    }
+
+    h4 {
+      width: 90vw;
+      letter-spacing: 1px;
+      font-weight: 300;
+      text-align: center;
+      background: var(--black);
+
+      strong {
+        color: var(--purple);
+        font-size: 18px;
+        font-weight: 500;
+        background: var(--black);
+
+        @include tablet {
+
+          font-size: 24px;
+
+        }
+
+        @include desktop {
+
+          font-size: 28px;
+
+        }
+      }
+
+      i {
+        color: var(--gold);
+        font-style: normal;
+        font-weight: 500;
+        background: var(--black);
+      }
+    }
+  }
+
+  &.heading {
+    z-index: -1;
+    transform: translateY(-30vh) translateZ(1px) scale(1.5);
+
+    div {
+      height: 100px;
+      width: 100vw;
+      filter: blur(30px);
+      background-color: rgba(0, 0, 0, 0.459);
+      z-index: 1;
+    }
+
+    .piltover {
+      background-color: transparent;
+      filter: blur(0px);
+      z-index: 10;
+      position: relative;
+      top: 0px;
+      right: 50%;
+      transform: translate(50%, 0);
+      color: var(--grey);
+      text-align: center;
+
+
+    }
+
+    .zaun {
+      background-color: transparent;
+      filter: blur(0px);
+      z-index: 10;
+      position: relative;
+      top: 0px;
+      right: 50%;
+      transform: translate(50%, 0);
+      color: var(--grey);
+    }
+
+  }
+}
+
+.footer {
+  position: relative;
+  display: block;
+  background-color: var(--black);
+  height: calc(100vh - 80px);
+  color: white;
+  overflow: hidden;
+
+  h3 {
+    font-weight: normal;
+    color: var(--color-blue);
+  }
+}

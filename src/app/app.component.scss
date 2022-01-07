@@ -1,0 +1,12 @@
+label {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  z-index: 999;
+
+  select {
+    border: none;
+    color: rgb(160, 160, 160);
+    background-color: transparent;
+  }
+}
