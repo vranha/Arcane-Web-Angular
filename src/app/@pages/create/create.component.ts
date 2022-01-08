@@ -79,6 +79,7 @@ export class CreateComponent implements OnInit {
           },
         };
         this.fakeApiService.addCharacter(character).subscribe();
+        window.alert("Go to list");
       }
     } else if (this.createForm.value.image === 'Alien') {
       if (this.createForm.valid) {
@@ -98,6 +99,7 @@ export class CreateComponent implements OnInit {
           },
         };
         this.fakeApiService.addCharacter(character).subscribe();
+        window.alert("Go to list");
       }
     } else if (this.createForm.value.image === 'Valkyrie') {
       if (this.createForm.valid) {
@@ -117,10 +119,13 @@ export class CreateComponent implements OnInit {
           },
         };
         this.fakeApiService.addCharacter(character).subscribe();
+        window.alert("Go to list");
       }
     }
 
     this.createForm.reset();
     this.submitted = false;
   }
+
+
 }

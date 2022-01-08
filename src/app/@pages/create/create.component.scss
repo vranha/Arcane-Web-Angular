@@ -1,5 +1,6 @@
 @import "../../../styles/responsive";
 
+
 form {
   display: flex;
   flex-direction: column;
@@ -15,6 +16,7 @@ form {
     margin-bottom: .3125rem;
     text-align: center;
     text-transform: uppercase;
+    cursor: default;
 
 
     strong {
@@ -153,5 +155,11 @@ form {
     font-size: .9375rem;
     letter-spacing: .3125rem;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover{
+      color: var(--white);
+      background-color: var(--black);
+    }
   }
 }

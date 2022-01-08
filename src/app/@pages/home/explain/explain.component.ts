@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import { faSlash } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,6 +10,8 @@ import { faSlash } from '@fortawesome/free-solid-svg-icons';
 export class ExplainComponent implements OnInit {
   faArrows = faAngleDoubleDown;
   faSlash = faSlash;
+
+  @Input() inputText: string;
 
   quote: string = 'two sides of the same coin';
   constructor() {}

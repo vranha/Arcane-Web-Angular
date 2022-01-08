@@ -125,6 +125,20 @@
         "agility": 70,
         "gadgets": 20
       }
+    },
+    {
+      "id": 103524734397099740,
+      "name": "Mario",
+      "alias": "The teacher",
+      "race": "Humano",
+      "origin": "Madrid",
+      "image": "https://www.pngkey.com/png/full/201-2014826_stitches-cliparts-lilo-and-stitch.png",
+      "stats": {
+        "strength": 80,
+        "intelligence": 43,
+        "agility": 20,
+        "gadgets": 90
+      }
     }
   ]
 }

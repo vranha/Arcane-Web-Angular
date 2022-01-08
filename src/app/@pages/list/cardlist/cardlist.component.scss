@@ -19,6 +19,7 @@ html {
   bottom: 10px;
   left: 85vw;
   width: 30px;
+  cursor: pointer;
   transition: .2s;
 
   @include tablet {
@@ -28,7 +29,7 @@ html {
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -37,6 +38,7 @@ html {
   top: 100px;
   left: 85vw;
   z-index: 9;
+  cursor: pointer;
   transition: .2s;
 
   @include tablet {
@@ -45,7 +47,7 @@ html {
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -59,6 +61,7 @@ html {
   top: 180px;
   z-index: 9999;
   display: flex;
+
 
 
   div {
@@ -113,6 +116,13 @@ html {
 
     &:focus~div ::after {
       background: var(--purple);
+    }
+  }
+
+  .labelDiv{
+    label{
+      cursor: pointer;
+
     }
   }
 }
@@ -201,6 +211,7 @@ h2 {
   justify-content: flex-start;
   background: linear-gradient(135deg, #424040, var(--purple));
   border-radius: 5px;
+  cursor: pointer;
   transition: 0.5s;
 
   @include tablet {}

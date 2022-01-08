@@ -24,10 +24,15 @@
     position: absolute;
     top: 123px;
     left: 20px;
-    color: #adadad;
     font-size: 35px;
     width: 40%;
     text-align: center;
+    cursor: pointer;
+    color: var(--purple);
+
+    :hover{
+      filter: brightness(0.8);
+    }
 
     @include tablet {
 
@@ -42,9 +47,6 @@
 
     }
 
-    strong {
-      color: var(--purple);
-    }
   }
 
   &__img {
@@ -80,10 +82,16 @@
     position: absolute;
     bottom: 111px;
     right: 28px;
-    color: #adadad;
+    color: var(--gold);
     font-size: 35px;
     width: 40%;
     text-align: center;
+    cursor: pointer;
+
+    :hover{
+      filter: brightness(1.2);
+    }
+
 
     @include tablet {
 
@@ -96,10 +104,6 @@
 
       font-size: 75px;
 
-    }
-
-    strong {
-      color: var(--gold);
     }
   }
 
