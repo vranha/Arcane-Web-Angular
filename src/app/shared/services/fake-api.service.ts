@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class FakeApiService {
-  baseUrl: string = 'http://localhost:3000/';
+  baseUrl: string = 'https://fake-server-app-arcane.herokuapp.com/';
   characterUrl: string = this.baseUrl + 'characters';
 
   characterList: CharacterInterface[] = [];

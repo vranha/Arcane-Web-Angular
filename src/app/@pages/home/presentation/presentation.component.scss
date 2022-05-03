@@ -2,6 +2,7 @@
 
 * {
   background-color: var(--black);
+
 }
 
 @include tablet {
@@ -19,7 +20,7 @@
 
   @include tablet {
 
-    background-image: url("https://arcane-profile-kit.co.uk/wp-content/uploads/2021/11/arcane-logo-rendered-master-2.png");
+    background-image: url("https://intothearcane.leagueoflegends.com/assets/images/hero-logos/arcane-logo.png");
     display:block;
     width: 50%;
     height: 200px;
@@ -120,7 +121,7 @@ ngx-typed-js {
   letter-spacing: 1px;
   text-align: right;
   position: absolute;
-  top: 180px;
+  top: 195px;
   left: 50%;
     transform: translate(calc(-50% + 60px), 0);
   max-width: 100px;
